@@ -1,0 +1,82 @@
+<%= form_for(home) do |f| %>
+  <% if home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :property_type %>
+    <%= f.text_field :property_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year_built %>
+    <%= f.text_field :year_built %>
+  </div>
+
+  <div class="field">
+    <%= f.label :energy %>
+    <%= f.text_field :energy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :garage %>
+    <%= f.text_field :garage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bedrooms %>
+    <%= f.text_field :bedrooms %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bathrooms %>
+    <%= f.text_field :bathrooms %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
